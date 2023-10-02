@@ -1,5 +1,5 @@
 from peewee import Model, CharField, TextField, DateTimeField, ForeignKeyField
-from config import DATABASE
+from configs.config import DATABASE
 from peewee import PostgresqlDatabase
 
 db = PostgresqlDatabase(**DATABASE)
