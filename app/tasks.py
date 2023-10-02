@@ -1,9 +1,8 @@
-from celery import Celery
-from models import ScheduledMessage, MessageTemplate
-from bot import bot
+from app.models import ScheduledMessage
 from datetime import datetime
 
-app = Celery('tasks', broker='redis://localhost:6379/0')
+from celery_app import app
+from main import bot
 
 
 @app.task
